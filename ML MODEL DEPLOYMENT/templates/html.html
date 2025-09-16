@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Status Prediction of HOTEL</title>
+    
+   
+    <link rel="stylesheet" href="static/style.css">
+	
+	
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Booking Status Prediction Model of HOTEL</h1>
+        <p>Enter the booking details to predict whether it's likely to be confirmed or canceled.</p>
+
+        <form id="prediction-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="no_of_adults">Number of Adults</label>
+                    <input type="number" id="no_of_adults" name="no of adults" value="2" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="no_of_children">Number of Children</label>
+                    <input type="number" id="no_of_children" name="no of children" value="0" min="0" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lead_time">Lead Time (days)</label>
+                <input type="number" id="lead_time" name="lead time" value="100" min="0" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="type_of_meal">Meal Plan</label>
+                    <select id="type_of_meal" name="type of meal" required>
+                        <option value="Meal Plan 1">Meal Plan 1</option>
+                        <option value="Meal Plan 2">Meal Plan 2</option>
+                        <option value="Not Selected">Not Selected</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="room_type">Room Type</label>
+                    <select id="room_type" name="room type" required>
+                        <option value="Room_Type 1">Room Type 1</option>
+                        <option value="Room_Type 2">Room Type 2</option>
+                        <option value="Room_Type 4">Room Type 3</option>
+						<option value="Room_Type 1">Room Type 4</option>
+                        <option value="Room_Type 2">Room Type 5</option>
+                        <option value="Room_Type 4">Room Type 6</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="market_segment_type">Market Segment</label>
+                <select id="market_segment_type" name="market segment type" required>
+                    <option value="Online">Online</option>
+                    <option value="Offline">Offline</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Aviation">Aviation</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="algorithm">Select Prediction Algorithm</label>
+                <select id="algorithm" name="algorithm" required>
+                    <option value="random_forest">Random Forest (More Accurate)</option>
+                    <option value="logistic_regression">Logistic Regression (Faster)</option>
+                </select>
+            </div>
+            <button type="submit" id="submit-btn">Predict Now</button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <h2>Result:</h2>
+            <p id="result-text"></p>
+        </div>
+        
+        <div id="loader" class="hidden"></div>
+    </div>
+
+
+
+<script src="static/script.js"></script>
+
+</body>
+</html>
